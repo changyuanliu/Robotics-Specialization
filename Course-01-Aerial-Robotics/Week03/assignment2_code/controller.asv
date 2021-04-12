@@ -21,10 +21,10 @@ maxF = params.maxF;
 
 K_pz = 160;
 K_dz = 20;
-K_pphi = 40;
+K_pphi = 20;
 K_dphi = 2;
 K_py = 80;
-K_dy = 10;
+K_dy = 40;
 
 phi_c = -1/g*( des_state.acc(1) + K_dy*(des_state.vel(1)-state.vel(1)) + K_py*(des_state.pos(1)-state.pos(1)));
 u1 = m * (g +  des_state.acc(2) + K_dz*(des_state.vel(2)-state.vel(2)) + K_pz*(des_state.pos(2)-state.pos(2)));
