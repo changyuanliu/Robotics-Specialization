@@ -58,16 +58,8 @@ else
         scale = t  / d0(t_index-1);
         t0 = polyT(8, 0, scale)';
         t0 = flipud(t0);
-        t1 = polyT(8, 1, scale)';
-        t1 = flipud(t1);
-        t2 = polyT(8, 2, scale)';
-        t2 = flipud(t2);
         index = [(t_index-2)*8+1 : (t_index-1)*8];
-
         desired_state.pos = coeff(index,:)'*t0;
-        desired_state.vel = coeff(index,:)'*t1;
-        desired_state.acc = coeff(index,:)'*t2;
-
     end
 %     desired_state.pos = zeros(3,1);
     desired_state.vel = zeros(3,1);
