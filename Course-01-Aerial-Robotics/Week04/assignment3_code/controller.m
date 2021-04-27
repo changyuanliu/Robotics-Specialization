@@ -20,18 +20,17 @@ function [F, M] = controller(t, state, des_state, params)
 g = params.gravity;
 m = params.mass;
 Ixx = params.I;
-invI = params.invI;
-L = params.arm_length;
+
 minF = params.minF;
 maxF = params.maxF;
 
 % Position control
-K_p_1 = 4;
-K_d_1 = 4;
-K_p_2 = 4;
-K_d_2 = 4;
-K_p_3 = 10;
-K_d_3 = 2;
+K_p_1 = 12;
+K_d_1 = 3;
+K_p_2 = 12;
+K_d_2 = 3;
+K_p_3 = 12;
+K_d_3 = 3;
 
 r3_T_ddot = des_state.acc(3);
 r3_T_dot = des_state.vel(3);
